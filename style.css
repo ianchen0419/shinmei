@@ -102,6 +102,11 @@ body {
 	padding: 0px 20px;
 }
 
+#menu li a:hover {
+	color: #FF9800;
+	opacity: 1;
+}
+
 .slider-area {
     width: 100%;
     overflow: hidden;
@@ -125,7 +130,7 @@ body {
 
 .slider-image {
     width: 100%;
-    height: calc(100vh - 300px);
+    height: 450px;
 }
 
 .image-1 {
@@ -217,7 +222,7 @@ body {
 	vertical-align: middle;
 	margin: 0;
 	border: 1px solid #BFBFBF;
-	padding: 40px;
+	padding: 20px 40px;
 	border-radius: 10px;
 	text-align: center;
 }
@@ -402,6 +407,17 @@ body {
     padding-top: 5px;
 }
 
+#contact section.slide-up {
+	opacity: 0;
+	position: relative;
+	bottom: -30px;
+}
+
+#contact section.slide-up.uping {
+	animation: uping 1s;
+	animation-fill-mode: forwards;
+}
+
 @-webkit-keyframes show {
 	0% {
 		opacity: 0;
@@ -418,6 +434,29 @@ body {
 
 	100% {
 		opacity: 1;
+	}
+}
+
+@-webkit-keyframes uping {
+	0% {
+		opacity: 0;
+		bottom: -30px
+	}
+
+	100% {
+		opacity: 1;
+		bottom: 0;
+	}
+}
+@keyframes uping {
+	0% {
+		opacity: 0;
+		bottom: -30px;
+	}
+
+	100% {
+		opacity: 1;
+		bottom: 0;
 	}
 }
 
