@@ -1,6 +1,6 @@
 * {
 	color: #333;
-	font-family: 'Century Gothic','Avenir','Helvetica neue','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Meiryo, sans-serif;;
 	letter-spacing: 0.1em;
 	font-size: 15px;
 }
@@ -125,7 +125,7 @@ body {
 
 .slider-image {
     width: 100%;
-    height: calc(100vh - 143px);
+    height: calc(100vh - 300px);
 }
 
 .image-1 {
@@ -202,30 +202,34 @@ body {
 	margin: 0;
 }
 
+.product-area {
+	display: flex;
+    justify-content: space-between;
+}
+
 .product-area a {
 	display: inline-block;
 	width: 30%;
-	margin-right: 20px;
 }
 
 .product-area .product-block {
 	display: inline-block;
 	vertical-align: middle;
 	margin: 0;
-	border: 2px solid #BFBFBF;
-	padding: 20px;
+	border: 1px solid #BFBFBF;
+	padding: 40px;
+	border-radius: 10px;
+	text-align: center;
 }
 
 .product-block h4 {
 	color: #0D6CE5;
-	text-align: center;
 	margin-bottom: 0;
-	font-size: 18px;
+	font-size: 16px;
     font-weight: normal;
 }
 
 .product-block p {
-	text-align: center;
 	margin-top: 0;
 	height: 50px;
 }
@@ -270,7 +274,7 @@ body {
 
 .infomation-block {
 	width: 25%;
-	border: 2px solid #BFBFBF;
+	border: 1px solid #BFBFBF;
 	vertical-align: top;
 	display: flex;
 	align-items: center;
@@ -278,9 +282,14 @@ body {
 	margin: 20px 0;
 }
 
+.infomation-block .fa {
+	color: #BFBFBF;
+}
+
 .infomation-block h4 {
 	color: #0D6CE5;
 	text-align: center;
+	width: 75%;
 }
 
 .news-area .news-item {
@@ -300,8 +309,10 @@ body {
 
 .news-component .tag {
 	display: inline-block;
-	color: #0844a4;
-	border: 1px solid #0844a4;
+	background: #0844a4;
+	font-size: 12px;
+	color: #fff;
+	padding: 3px 10px;
 }
 
 .news-item a {
@@ -315,12 +326,13 @@ body {
 
 .all-news a {
 	display: inline-block;
-	border: 1px solid #000;
 	padding: 8px 20px;
+	background: #444444;
+	border-radius: 30px;
 }
 
 .all-news span, .all-news i {
-	color: #0D6CE5;
+	color: #fff;
 }
 
 #footer {
@@ -381,6 +393,13 @@ body {
 
 .sitemap-block a {
 	margin-right: 20px;
+}
+
+.gray {
+	background: #f7f6f6;
+    margin-top: 80px;
+    padding-bottom: 80px;
+    padding-top: 5px;
 }
 
 @-webkit-keyframes show {
