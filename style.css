@@ -501,6 +501,92 @@ body {
 	color: #0D6CE5;
 }
 
+.deco-title h3	{
+	color: #0844a4;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.deco-title:before {
+	content: '\f009';
+	color: #0844a4;
+	font-family: FontAwesome;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	font-size: 18px;
+}
+
+.trademark-area {
+	margin: 0;
+}
+
+.trademark-area img {
+	vertical-align: top;
+	margin-right: 40px;
+}
+
+.trademark-area figcaption {
+	display: inline-block;
+	vertical-align: top;
+	width: 60%;
+}
+
+.contact-box .title {
+	color: #2A7393;
+	font-size: 20px;
+}
+
+.contact-box {
+	text-align: center;
+	margin: 80px auto;
+	width: 800px;
+	padding: 15px;
+	background: repeating-linear-gradient(
+		135deg,
+		#2A7393,
+		#2A7393 40px,
+		#F9EFD9 40px,
+		#F9EFD9 50px,
+		#B02725 50px,
+		#B02725 90px,
+		#F9EFD9 90px,
+		#F9EFD9 100px
+	);
+	border-radius: 2px;
+}
+
+.contact-box .contact-content {
+	background: #F9EFD9;
+	padding: 40px 0;
+
+}
+
+.contact-box .contact-button {
+	background: #2A7393;
+	color: #fff;
+	min-width: 300px;
+	padding: 5px 0;
+	display: inline-block;
+	margin: 40px 0 20px 0;
+	border-radius: 4px;
+}
+
+.contact-path+.deco-title {
+	margin-top: 40px;
+}
+
+.nostyle-list li {
+	list-style: none;
+}
+
+.small-title {
+	margin-bottom: 0;
+}
+
+.small-title+p {
+	margin-top: 0;
+}
 
 @-webkit-keyframes show {
 	0% {
