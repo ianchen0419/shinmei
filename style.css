@@ -69,6 +69,10 @@ body {
 	width: 55%;
 }
 
+.logo-area a {
+	display: inline-block;
+}
+
 .title-area {
 	margin: 0;
 	margin-right: 20px;
@@ -85,6 +89,7 @@ body {
 #menu ul {
 	font-size: 0;
 	padding: 15px 0;
+	text-align: center;
 }
 
 #menu li {
@@ -222,7 +227,7 @@ body {
 	vertical-align: middle;
 	margin: 0;
 	border: 1px solid #BFBFBF;
-	padding: 20px 40px;
+	padding: 20px 35px;
 	border-radius: 10px;
 	text-align: center;
 }
@@ -237,6 +242,7 @@ body {
 .product-block p {
 	margin-top: 0;
 	height: 50px;
+	font-size: 12px;
 }
 
 .product-block .detail-button {
@@ -414,9 +420,87 @@ body {
 }
 
 #contact section.slide-up.uping {
-	animation: uping 1s;
+	animation: uping 0.3s;
 	animation-fill-mode: forwards;
 }
+
+.visual-title {
+	background-color: #d4e3fc;
+    background-image: linear-gradient(45deg, #fff 25%, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff 75%),linear-gradient(-135deg, #fff 25%, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff 75%);
+    background-position: 0 0, 3px 3px;
+    background-repeat: repeat;
+    background-size: 6px 6px;
+    text-align: center;
+    padding: 50px 0;
+    text-align: center;
+    color: #0844a4;
+    margin: 0;
+    font-size: 32px;
+}
+
+.contact-path {
+    padding: 0;
+    font-size: 0;
+    margin-top: 20px;
+}
+
+.contact-path li {
+    list-style: none;
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+}
+
+.contact-path li a {
+	font-size: 12px;
+}
+
+.contact-path li+li:before {
+    content: '\f105';
+    font-family: FontAwesome;
+    margin: 0px 8px;
+    color: #ababab;
+    font-size: 12px;
+}
+
+.section-title {
+	margin: 40px 0;
+}
+
+.section-title h2 {
+	padding: 8px 15px;
+    color: #0844a4;
+    border-bottom: 1px dotted #0844a4;
+    border-left: 5px solid #0844a4;
+    min-width: 400px;
+    display: inline-block;
+    margin: 0;
+    font-size: 20px;
+}
+
+.link-area {
+	margin: 40px 0;
+}
+
+.link-area .link-item {
+	margin-right: 30px;
+}
+
+.link-item span {
+	color: #0D6CE5;
+}
+
+.link-item .fa {
+	color: #fff;
+	background: #0D6CE5;
+	border-radius: 50%;
+	padding: 2px 4px 2px 8px;
+}
+
+.link-text {
+	color: #0D6CE5;
+}
+
 
 @-webkit-keyframes show {
 	0% {

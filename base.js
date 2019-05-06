@@ -7,10 +7,7 @@ headerXhr.send();
 
 headerXhr.onreadystatechange=function(){
 	if(headerXhr.readyState==4 && headerXhr.status==200){
-
 		header.innerHTML = headerXhr.responseText;
-
-
 	}
 };
 
@@ -21,17 +18,9 @@ menuXhr.open('GET', 'menu.html', true);
 menuXhr.send();
 
 menuXhr.onreadystatechange=function(){
-
-	
 	if(menuXhr.readyState==4 && menuXhr.status==200){
-
 		menu.innerHTML = menuXhr.responseText;
-		if(menuXhr.responseText){
-			// menuHighlight();
-		}
-
 	}
-
 };
 
 //footer.html load
@@ -42,9 +31,7 @@ footerXhr.send();
 
 footerXhr.onreadystatechange=function(){
 	if(footerXhr.readyState==4 && footerXhr.status==200){
-
 		footer.innerHTML = footerXhr.responseText;
-
 	}
 };
 
@@ -56,12 +43,12 @@ function sliderShow(){
 	let sliderPosition=0;
 	let isSliding=false;
 
-	setInterval(function(){
+	var timer=setInterval(sliding, 5000);
+	function sliding(){
 		isSliding=true;
-
 		if(sliderPosition==-50){
 			//第3枚
-			sliderPosition-=25;
+			sliderPosition=-75;
 			sliderWrapper.style.transform="translateX("+sliderPosition+"%)";
 			setTimeout(function(){
 				sliderWrapper.style.transition="none";
@@ -79,8 +66,7 @@ function sliderShow(){
 			sliderPosition-=25;
 			sliderWrapper.style.transform="translateX("+sliderPosition+"%)";
 		}
-
-	}, 5000);
+	}
 
 	sliderWrapper.addEventListener('transitionend', function(){
 		var nowActived=document.querySelector('.dot.active');
@@ -101,6 +87,8 @@ function sliderShow(){
 		if(isSliding==false){
 			sliderPosition=0;
 			sliderWrapper.style.transform="translateX("+sliderPosition+"%)";
+			clearInterval(timer);
+			timer=setInterval(sliding, 5000);
 		}
 	});
 
@@ -108,6 +96,8 @@ function sliderShow(){
 		if(isSliding==false){
 			sliderPosition=-25;
 			sliderWrapper.style.transform="translateX("+sliderPosition+"%)";
+			clearInterval(timer);
+			timer=setInterval(sliding, 5000);
 		}
 	});
 
@@ -115,6 +105,8 @@ function sliderShow(){
 		if(isSliding==false){
 			sliderPosition=-50;
 			sliderWrapper.style.transform="translateX("+sliderPosition+"%)";
+			clearInterval(timer);
+			timer=setInterval(sliding, 5000);
 		}
 	});
 
@@ -143,7 +135,7 @@ var sections=document.querySelectorAll('section');
 function sectionShowUp(e){
 	if(e.deltaY>=1){
 		for(each in sections){
-			if(sections[each].offsetTop-innerHeight/2<scrollY && !sections[each].classList.contains('uping')){
+			if(sections[each].offsetTop-innerHeight<scrollY && !sections[each].classList.contains('uping')){
 				sections[each].classList.add('uping');
 			}
 		}
@@ -151,4 +143,3 @@ function sectionShowUp(e){
 }
 
 window.addEventListener('wheel', debounce(sectionShowUp, 20));
-
