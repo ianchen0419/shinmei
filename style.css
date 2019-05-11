@@ -45,6 +45,10 @@ body {
 	opacity: 0;
 }
 
+.font-bold * {
+	font-weight: bold;
+}
+
 .wrapper-size {
 	max-width: 1100px;
 	margin: 0 auto;
@@ -57,29 +61,36 @@ body {
 }
 
 #header {
-	padding: 20px;
+	padding: 10px 0;
 }
 
-.logo-area, .tel-area, .language-area, .title-area {
-	display: inline-block;
-	vertical-align: middle;
+#header .wrapper-size {
+	display: flex;
 }
 
-.logo-area {
-	width: 55%;
-}
-
-.logo-area a {
-	display: inline-block;
-}
-
-.title-area {
+#header h1 {
+	font-weight: normal;
 	margin: 0;
-	margin-right: 20px;
+	margin-left: 60px;
 }
 
-.tel-area {
-	margin-right: 20px;
+#header p {
+	margin: 0;
+	display: inline-block;
+	width: 400px;
+}
+
+#header .contact-area {
+	padding: 0;
+}
+
+#header .english-area {
+	display: inline-block;
+    background: #0a44a4;
+    color: #fff;
+    border-radius: 3px;
+    padding: 2px 40px;
+    margin-bottom: 10px;
 }
 
 #menu {
@@ -159,14 +170,19 @@ body {
     width: 820px;
     position: absolute;
     bottom: 120px;
-    left: 10%;
+    left: 50%;
     background: rgba(255, 255, 255, 0.7);
+    transform: translateX(-50%);
 }
 
 .slider-text .catch-copy {
 	color: #333;
 	font-weight: bold;
 	font-size: 26px;
+}
+
+.slider-text p {
+	font-weight: bold;
 }
 
 .dots {
@@ -198,18 +214,21 @@ body {
 
 .home-title {
 	text-align: center;
-	margin-top: 80px;
-	margin-bottom: 40px;
+	margin-top: 40px;
+	margin-bottom: 20px;
 }
 
 .home-title .en {
 	color: #0844a4;
-	font-size: 30px;
-	font-weight: bold;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .home-title h2 {
 	margin: 0;
+	display: inline-block;
 }
 
 .product-area {
@@ -236,7 +255,6 @@ body {
 	color: #0D6CE5;
 	margin-bottom: 0;
 	font-size: 16px;
-    font-weight: normal;
 }
 
 .product-block p {
@@ -301,6 +319,7 @@ body {
 	color: #0D6CE5;
 	text-align: center;
 	width: 75%;
+	margin: 10px 0;
 }
 
 .news-area .news-item {
@@ -533,7 +552,7 @@ body {
 }
 
 .contact-box .title {
-	color: #2A7393;
+	color: #0a44a4;
 	font-size: 20px;
 }
 
@@ -541,29 +560,19 @@ body {
 	text-align: center;
 	margin: 80px auto;
 	width: 800px;
-	padding: 15px;
-	background: repeating-linear-gradient(
-		135deg,
-		#2A7393,
-		#2A7393 40px,
-		#F9EFD9 40px,
-		#F9EFD9 50px,
-		#B02725 50px,
-		#B02725 90px,
-		#F9EFD9 90px,
-		#F9EFD9 100px
-	);
-	border-radius: 2px;
+	padding: 15px 30px;
+	background: #EBEBEB;
+	border-radius: 10px;
 }
 
 .contact-box .contact-content {
-	background: #F9EFD9;
+	background: #fff;
 	padding: 40px 0;
-
+	border-radius: 10px;
 }
 
 .contact-box .contact-button {
-	background: #2A7393;
+	background: #0a44a4;
 	color: #fff;
 	min-width: 300px;
 	padding: 5px 0;
