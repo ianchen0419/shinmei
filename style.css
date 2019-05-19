@@ -81,6 +81,7 @@ body {
 	width: 400px;
 	font-size: 12px;
 	vertical-align: middle;
+	text-align: center;
 }
 
 .logo-content a {
@@ -94,6 +95,7 @@ body {
 
 #header .contact-area {
 	padding: 0;
+	display: block;
 }
 
 #header .english-area {
@@ -101,7 +103,7 @@ body {
     background: #0a44a4;
     color: #fff;
     border-radius: 3px;
-    padding: 2px 40px;
+    padding: 2px 30px;
     margin-bottom: 10px;
 }
 
@@ -762,7 +764,21 @@ body {
 	margin-left: 50px;
 }
 
-.image-area {
+.thermal-catch figure {
+	display: inline-block;
+	vertical-align: middle;	
+}
+
+.thermal-catch figcaption {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.thermal-catch i {
+	color: #1154a3;
+}
+
+.thermal-catch {
 	text-align: center;
 	margin: 40px 0;
 }
@@ -770,7 +786,7 @@ body {
 .thermal-image-area {
 	margin: 20px 0;
 	display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 
@@ -778,12 +794,13 @@ body {
 	margin-right: 60px;
 	display: inline-block;
 	vertical-align: top;
-	width: 60%;
+	width: 65%;
 }
 
 .thermal-image-area .thermal-image {
 	display: inline-block;
 	vertical-align: top;
+	text-align: center;
 }
 
 .thermal-image .fa {
@@ -804,6 +821,136 @@ body {
 
 .thermal-image .thermal-link {
 	text-align: center;
+}
+
+.mar_top20 {
+	margin-top: 20px;
+}
+
+.comment-text {
+	text-align: center;
+	font-size: 12px;
+}
+
+.image-area {
+	text-align: center;
+	margin: 40px 0;
+}
+
+.wrap-image-area {
+	text-align: center;
+	margin: 40px 0;
+}
+
+.wrap-image-area figure {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.egg-function-area {
+	text-align: center;
+	margin: 40px 0;
+}
+
+.egg-function-area .egg-function-item {
+	display: inline-block;
+    width: 180px;
+    border-radius: 50%;
+    border: 2px solid #0F52A1;
+    vertical-align: middle;
+    text-align: center;
+    padding: 45px 0;
+    margin: 0 10px;
+}
+
+.egg-function-item .num {
+	color: #0F52A1;
+	font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.egg-function-item  h4 {
+	color: #0F52A1;
+	margin: 0;
+}
+
+.egg-function-area .egg-and-icon {
+	display: inline-block;
+	vertical-align: middle;
+	background: #0F52A1;
+	color: #fff;
+	border-radius: 50%;
+    font-size: 18px;
+    padding: 4px 7px;
+    text-align: center;
+}
+
+.egg-step-area {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.egg-step-area figure {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.egg-step-area i {
+	color: #0F52A1;
+}
+
+.egg-step-area figcaption {
+	margin-top: 10px;
+}
+
+.border-image {
+	border: 1px solid #000;
+}
+
+.fertilizer-table {
+	margin: 40px 0;
+}
+
+.fertilizer-table th {
+	background: #D4E3FC;
+	color: #0844A4;
+}
+
+.fertilizer-table td {
+	background: #F7F6F6;
+}
+
+.fertilizer-table th, .fertilizer-table td {
+	padding: 15px 20px;
+}
+
+.pad_lt0 {
+	padding-left: 0;
+}
+
+.type-table th {
+	background: #0844A4;
+	color: #fff;
+}
+
+.type-table td {
+	background: #F7F6F6;
+	text-align: center;
+}
+
+.type-table th, .type-table td {
+	padding: 10px;
+}
+
+.type-table caption {
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 10px;
 }
 
 @-webkit-keyframes show {
