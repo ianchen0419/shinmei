@@ -707,7 +707,6 @@ body {
 
 .solutions {
 	margin: 60px 0;
-	clear: right;
 }
 
 .solutions img {
@@ -732,13 +731,16 @@ body {
 }
 
 .solutions .solutions-button {
+	text-align: right;
+}
+
+.solutions .solutions-button a {
 	display: inline-block;
     background: #0a44a4;
     color: #fff;
     border-radius: 3px;
     padding: 2px 30px;
     margin-bottom: 10px;
-    float: right;
 }
 
 .advantage-button a {
@@ -952,6 +954,95 @@ body {
 	text-align: left;
 	margin-bottom: 10px;
 }
+
+.products-item {
+	display: block;
+	margin: 20px 0;
+}
+
+.products-item .products-content {
+	display: inline-block;
+	width: 600px;
+	vertical-align: top;
+	margin-left: 40px;
+}
+
+.products-item .deco-title h2 {
+	display: inline-block;
+    color: #0844a4;
+    vertical-align: middle;
+}
+
+.products-content .products-button {
+	text-align: right;
+}
+
+.products-button button {
+    background: #0a44a4;
+    color: #fff;
+    border-radius: 3px;
+    padding: 2px 30px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.blue-line {
+    border-color: #0944a4;
+    border-width: 1px;
+    border-style: solid;
+    margin: 60px 0;
+}
+
+.section-title.detail {
+	cursor: pointer;
+}
+
+.section-title.detail h2:after {
+	content: '詳細';
+    display: inline-block;
+    background: #0944a4;
+    color: #fff;
+    border-radius: 3px;
+    padding: 2px 20px;
+    font-size: 14px;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.thermal-image-content .thermal-button-area {
+	text-align: right;
+}
+
+.thermal-image-content .thermal-button-area a {
+	display: inline-block;
+	border-radius: 3px;
+    padding: 2px 10px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.thermal-button-area .red-button {
+	border: 1px solid #ED3833;
+}
+
+.thermal-button-area .blue-button {
+	border: 1px solid #0944a4;
+	background: #0944a4;
+	color: #fff;
+}
+
+.thermal-button-area .red-button span {
+	color: #ED3833;
+	vertical-align: middle;
+}
+
+.thermal-button-area .red-button .fa {
+	color: #ED3833;
+	font-size: 22px;
+	vertical-align: middle;
+}
+
+
 
 @-webkit-keyframes show {
 	0% {
