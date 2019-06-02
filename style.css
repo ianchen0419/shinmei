@@ -66,20 +66,18 @@ body {
 
 #header .wrapper-size {
 	display: flex;
+	justify-content: space-between;
 }
 
 .logo-content h1 {
 	font-weight: normal;
 	margin: 0;
 	margin-left: 60px;
-	font-size: 12px;
 }
 
 .logo-content p {
 	margin: 0;
 	display: inline-block;
-	width: 400px;
-	font-size: 12px;
 	vertical-align: middle;
 	text-align: center;
 }
@@ -500,6 +498,10 @@ body {
 	margin: 40px 0;
 }
 
+.section-title+.deco-title {
+	margin-top: 0;
+}
+
 .section-title h2 {
 	padding: 8px 15px;
     color: #0844a4;
@@ -509,6 +511,34 @@ body {
     display: inline-block;
     margin: 0;
     font-size: 20px;
+}
+
+.section-title.full-line {
+	border-bottom: 1px dotted #0844a4;
+    border-left: 5px solid #0844a4;
+}
+
+.section-title.full-line .tag {
+	display: inline-block;
+	vertical-align: middle;
+	color: #0844a4;
+	border: 1px solid #0844a4;
+	font-size: 12px;
+	padding: 2px 8px;	
+	margin-right: 10px;
+}
+
+.section-title.full-line .type {
+	font-size: 12px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+.section-title.full-line h2 {
+	border: none;
+	padding-top: 0;
+	margin-right: 20px;
+	min-width: 200px;
 }
 
 .section-title.strong span {
@@ -528,8 +558,14 @@ body {
 	margin-right: 30px;
 }
 
+.link-item.block {
+	display: block;
+	margin-bottom: 15px;
+}
+
 .link-item span {
 	color: #0D6CE5;
+	font-size: 15px;
 }
 
 .link-item .fa {
@@ -537,16 +573,29 @@ body {
 	background: #0D6CE5;
 	border-radius: 50%;
 	padding: 2px 4px 2px 8px;
+	font-size: 15px;
+	margin-right: 8px;
 }
 
 .link-text {
 	color: #0D6CE5;
 }
 
+.deco-title {
+	margin: 15px 0;
+}
+
+.deco-title+.fertilizer-table {
+	margin-top: 0;
+}
+
 .deco-title h3	{
 	color: #0844a4;
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
+	margin: 0;
+	width: 90%;
+	text-align: left;
 }
 
 .deco-title:before {
@@ -554,9 +603,10 @@ body {
 	color: #0844a4;
 	font-family: FontAwesome;
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
 	margin-right: 5px;
 	font-size: 18px;
+	margin-top: 3px;
 }
 
 .deco-title.line h2 {
@@ -564,6 +614,7 @@ body {
 	font-size: 20px;
 	color: #0844a4;
 	vertical-align: middle;	
+	margin: 0;
 }
 
 .deco-title.line h2:after {
@@ -578,6 +629,7 @@ body {
 
 .deco-title.line:before {
 	font-size: 22px;
+	margin-top: 5px;
 }
 
 .deco-title.line:after {
@@ -615,7 +667,7 @@ body {
 
 .contact-box .contact-content {
 	background: #fff;
-	padding: 40px 0;
+	padding: 40px 20px;
 	border-radius: 10px;
 }
 
@@ -757,15 +809,6 @@ body {
 	margin: 20px 0;
 }
 
-.image-article {
-	display: flex;
-    align-items: center;
-}
-
-.image-article img {
-	margin-left: 50px;
-}
-
 .thermal-catch figure {
 	display: inline-block;
 	vertical-align: middle;	
@@ -785,48 +828,51 @@ body {
 	margin: 40px 0;
 }
 
-.thermal-image-area {
+.image-and-text {
 	margin: 20px 0;
 	display: flex;
     justify-content: space-between;
 }
 
-
-.thermal-image-area .thermal-image-content {
+.image-and-text .text-part {
 	margin-right: 60px;
 	display: inline-block;
 	vertical-align: top;
 	width: 65%;
 }
 
-.thermal-image-area .thermal-image {
+.text-part p {
+	margin-top: 0;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.text-part h6 {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.image-and-text .text-part {
 	display: inline-block;
 	vertical-align: top;
-	text-align: center;
 }
 
-.thermal-image .fa {
-	color: #fff;
-    background: #0D6CE5;
-    border-radius: 50%;
-    padding: 2px 4px 2px 8px;
+.image-part.two-image figure {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 10px;
 }
 
-.thermal-image span {
-	color: #0D6CE5;
-}
-
-.thermal-image a {
-	display: block;
-	margin: 10px 0;
-}
-
-.thermal-image .thermal-link {
+.image-part .link-item {
 	text-align: center;
 }
 
 .mar_top20 {
 	margin-top: 20px;
+}
+
+.mar_top60 {
+	margin-top: 60px;
 }
 
 .comment-text {
@@ -940,6 +986,15 @@ body {
 	color: #fff;
 }
 
+.type-table.combo-table tbody th {
+	background: #D4E3FC;
+	color: #0844A4;
+}
+
+.type-table.combo-table {
+	margin-bottom: 60px;
+}
+
 .type-table td {
 	background: #F7F6F6;
 	text-align: center;
@@ -953,6 +1008,13 @@ body {
 	font-weight: bold;
 	text-align: left;
 	margin-bottom: 10px;
+}
+
+.type-table caption.bottom {
+	caption-side: bottom;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 0;
 }
 
 .products-item {
@@ -971,6 +1033,7 @@ body {
 	display: inline-block;
     color: #0844a4;
     vertical-align: middle;
+    margin: 0;
 }
 
 .products-content .products-button {
@@ -1009,11 +1072,18 @@ body {
     vertical-align: middle;
 }
 
-.thermal-image-content .thermal-button-area {
+.image-and-text .button-area {
 	text-align: right;
+	margin-top: 20px;
 }
 
-.thermal-image-content .thermal-button-area a {
+.image-and-text .image-part .button-area a {
+	display: block;
+	width: 100px;
+	margin: 10px auto;
+}
+
+.red-button,.blue-button {
 	display: inline-block;
 	border-radius: 3px;
     padding: 2px 10px;
@@ -1021,27 +1091,61 @@ body {
     vertical-align: middle;
 }
 
-.thermal-button-area .red-button {
+.red-button {
 	border: 1px solid #ED3833;
 }
 
-.thermal-button-area .blue-button {
+.blue-button {
 	border: 1px solid #0944a4;
 	background: #0944a4;
 	color: #fff;
 }
 
-.thermal-button-area .red-button span {
+.red-button span {
 	color: #ED3833;
 	vertical-align: middle;
 }
 
-.thermal-button-area .red-button .fa {
+.red-button .fa {
 	color: #ED3833;
 	font-size: 22px;
 	vertical-align: middle;
+	background: none;
 }
 
+.info-box {
+	border: 1px solid #000;
+	padding: 20px 40px;
+	margin: 40px;
+}
+
+.info-box img {
+	vertical-align: middle;
+	margin-right: 40px;
+}
+
+.info-box figcaption {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.comment-area {
+	font-size: 0;
+}
+
+.comment-area * {
+	font-size: 12px;
+}
+
+.comment-content {
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.comment-content h6 {
+	margin: 10px 0;
+}
 
 
 @-webkit-keyframes show {
@@ -1087,7 +1191,6 @@ body {
 }
 
 @media print {
-	
 	body {
 		opacity: 1;
 	}
