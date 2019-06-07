@@ -709,6 +709,8 @@ body {
     left: 10%;
     padding: 20px 40px;
     font-size: 30px;
+    min-width: 250px;
+    text-align: center;
 }
 
 .advantage-area {
@@ -1029,11 +1031,16 @@ body {
 	margin-left: 40px;
 }
 
-.products-item .deco-title h2 {
+.products-item .deco-title h2,
+.sitemap-item .deco-title h2 {
 	display: inline-block;
     color: #0844a4;
     vertical-align: middle;
     margin: 0;
+}
+
+.sitemap-item .deco-title h2 {
+	font-size: 18px;
 }
 
 .products-content .products-button {
@@ -1083,12 +1090,23 @@ body {
 	margin: 10px auto;
 }
 
-.red-button,.blue-button {
+.fertilizer-table .button-area {
+	text-align: right;
+}
+
+.red-button,.blue-button,.light-button {
 	display: inline-block;
 	border-radius: 3px;
     padding: 2px 10px;
     margin: 0 5px;
     vertical-align: middle;
+}
+
+a.light-button {
+	border: 1px solid #0844a4;
+	background: #d4e3fc;
+	width: 100px;
+    text-align: center;
 }
 
 .red-button {
@@ -1147,7 +1165,71 @@ body {
 	margin: 10px 0;
 }
 
+.company-wrapper {
+	margin-top: 60px;
+}
 
+.company-block {
+	display: inline-block;
+	vertical-align: top;
+	margin: 40px;
+}
+
+.company-block a {
+	display: inline-block;
+	position: relative;
+}
+
+.company-text {
+	background: rgba(212, 227, 252, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.company-text h2 {
+	margin: 0;
+	color: #0844a4;
+}
+
+.sitemap-wrapper {
+	margin: 40px 0;
+	font-size: 0;
+	display: flex;
+    flex-flow: column wrap;
+    max-height: 1000px;
+}
+
+.sitemap-item {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	margin: 20px 0;
+}
+
+.sitemap-main {
+	padding-left: 0;
+}
+
+.sitemap-main li {
+	list-style: none;
+	margin: 12px 0;
+}
+
+.sitemap-sub {
+	padding-left: 32px;
+	margin: 10px 0;
+}
+
+.sitemap-sub li {
+	margin: 5px 0;
+}
+
+.mar_top40 {
+	margin-top: 40px;
+}
 @-webkit-keyframes show {
 	0% {
 		opacity: 0;
