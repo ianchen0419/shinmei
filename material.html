@@ -26,10 +26,10 @@
 				<li>確認</li>
 				<li>資料ダウンロード</li>
 			</ol>
+			
+			<p>この度は資料ダウンロードのご希望をいただき、誠にありがとうございます。<br>必要な項目をご記入の上、「入力内容を確認する」ボタンをクリックしてください。<br>情報入力後に資料ダウンロードページが表示されます。</p>
 			<form action="">
-				<p>この度は資料ダウンロードのご希望をいただき、誠にありがとうございます。<br>必要な項目をご記入の上、「入力内容を確認する」ボタンをクリックしてください。<br>情報入力後に資料ダウンロードページが表示されます。</p>
-
-
+				
 				<table width="100%" class="fertilizer-table">
 					<tbody>
 						<tr>
@@ -238,40 +238,12 @@
 						<div class="badge">必須</div>
 					</div>
 					<div>
-						<input type="text" name="your_postcode" class="short" required placeholder="例：1500047" />
-						<button class="blue-button" id="postButton" type="button">
+						<input type="number" name="your_postcode" id="postcode" class="short" required placeholder="例：1500047" maxlength="7" />
+						<button class="blue-button" id="postButton" type="button" onclick="jsonp(postcode.value)">
 							<i class="fa fa-search"></i>
 							<span>郵便番号から<br>住所を自動入力</span>
 						</button>
-						<div id="res"></div>
 					</div>
-					<!-- https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyAHREQgV1IXGfh9-ZkkwricG1ZhNKy-MRQ -->
-					<!-- AIzaSyAHREQgV1IXGfh9-ZkkwricG1ZhNKy-MRQ -->
-					<script>
-						/*test.php請換成後端接收的檔案*/
-
-						var checkedJSON={
-							languague: 'ja',
-							address: '1600002'
-						}
-						var xmlhttp=new XMLHttpRequest();
-
-						xmlhttp.open('POST', 'https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyAHREQgV1IXGfh9-ZkkwricG1ZhNKy-MRQ', true);
-
-						
-						xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-						xmlhttp.onreadystatechange=function(){
-
-							if(xmlhttp.readyState==4 && xmlhttp.status==200){
-								res.textContent=xmlhttp.responseText;
-
-							}
-						};
-
-						xmlhttp.send(
-							JSON.stringify(checkedJSON)
-						)
-					</script>
 					<div>
 						<div id="dropdownWrapper">
 							<input type="text" hidden id="dropdownInput" name="your_address1" required  />
@@ -328,13 +300,59 @@
 								<div class="dropdown-option" onclick="choose(this.innerText)">沖縄県</div>
 							</div>
 						</div>
-						<input type="text" name="your_address2" class="short" required placeholder="市区町村" />
+						<input type="text" name="your_address2" id="address2" class="short" required placeholder="市区町村" />
 					</div>
 					<div>
 						<input type="text" name="your_address2" required placeholder="番地、建物、フロア/部屋番号等" />
 					</div>
+					<p>＊代理店の方は、顧客の所在地を選択してください。<br>不明な場合は、貴社の所在地を選択してください。</p>
+				</div>
+				<div class="contact-item">
+					<div class="title">
+						<span>電話番号</span>
+						<div class="badge">必須</div>
+					</div>
+					<input type="tel" name="your_phone" required />
+				</div>
+				<div class="contact-item">
+					<div class="title">
+						<span>メールアドレス</span>
+						<div class="badge">必須</div>
+					</div>
+					<input type="email" name="your_mail" required />
+				</div>
+				<div class="contact-item">
+					<div class="title">
+						<span>メールアドレス（確認用）</span>
+						<div class="badge">必須</div>
+					</div>
+					<input type="email" name="your_mail_confirm" required />
+				</div>
+				<div class="contact-item">
+					<div class="title">
+						<span>ホームページアドレス</span>
+					</div>
+					<input type="url" name="your_website" />
+				</div>
+
+				<label class="checkbox">
+					<input type="checkbox" name="your_agree" required />
+					<i class="fa fa-check"></i>
+					<span>「</span><a href="privacy.html" target="_blank" class="link-text">個人情報保護方針</a><span>」に同意する</span>
+				</label>
+				<div class="badge">必須</div>
+				
+				<div class="button-area">
+					<!-- <input type="submit" value="入力内容を確認する" class="green-button" /> -->
+					<a href="material__c.html" class="green-button">入力内容を確認する</a>
 				</div>
 			</form>
+
+			<figure class="jprs">
+				<img src="inc/img/download/jprs.png" alt="jprs" />
+				<figcaption>このサイトはJPRSにより認証されています。<br>情報送信は暗号化により保護されます。</figcaption>
+			</figure>
+
 		</div>
 
 	</main>

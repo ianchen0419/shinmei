@@ -151,3 +151,23 @@ function choose(content){
 	dropdownWrapper.classList.remove('show');
 
 }
+
+function jsonp(url) {
+    window.showData=function(data){
+		delete window['showData'];
+    	document.body.removeChild(script);
+    	if(data.results!==null){
+    		// 都道府県
+			choosedText.textContent=data.results[0].address1;
+			choosedText.classList.add('active');
+			dropdownInput.value=data.results[0].address1;
+			// 市区町村
+			address2.value=data.results[0].address2+data.results[0].address3;
+    	}
+    }
+
+    var script=document.createElement('script');
+    script.src='http://zipcloud.ibsnet.co.jp/api/search?zipcode='+url+'&callback=showData';
+    document.body.appendChild(script);
+}
+
