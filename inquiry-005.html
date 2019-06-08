@@ -31,7 +31,7 @@
 			<form action="" class="mar_top40">
 				<div class="contact-item">
 					<div class="title">製品名</div>
-					<p>包装機用 超小型サーマルプリンター SCS</p>
+					<p>チェックスタンパー</p>
 				</div>
 				<div class="contact-item threerow-checkbox">
 					<div class="title">
@@ -109,69 +109,29 @@
 					<textarea name="add_content" cols="30" rows="10" placeholder="補足事項があればご記入ください。"></textarea>
 				</div>
 				<div class="contact-item">
-					<div class="title">包装する製品の種類</div>
-					<input type="text" name="package_type" />
+					<div class="title">用途</div>
+					<input type="text" name="use_type" placeholder="手形、小切手、商品券、入場券、パンフレットなど" />
 				</div>
 				<div class="contact-item">
-					<div class="title">包装機明細</div>
-					<input type="text" name="machine_detail" placeholder="メーカー名・形式名" />
-				</div>
-				<div class="contact-item less-checkbox">
-					<div class="title">包装機ピロー種類</div>
-					<label class="checkbox">
-						<input type="checkbox" name="pillow-type" value="縦ピロー" />
-						<i class="fa fa-check"></i>
-						<span>縦ピロー</span>
-					</label>
-					<label class="checkbox">
-						<input type="checkbox" name="pillow-type" value="横ピロー" />
-						<i class="fa fa-check"></i>
-						<span>横ピロー</span>
-					</label>
-				</div>
-				<div class="contact-item less-checkbox">
-					<div class="title">包装機稼働方法</div>
-					<label class="checkbox">
-						<input type="checkbox" name="operate_method" value="連続式" />
-						<i class="fa fa-check"></i>
-						<span>連続式</span>
-					</label>
-					<label class="checkbox">
-						<input type="checkbox" name="operate_method" value="間欠式" />
-						<i class="fa fa-check"></i>
-						<span>間欠式</span>
-					</label>
-				</div>
-				<div class="contact-item less-checkbox">
-					<div class="title">印字内容</div>
-					<label class="checkbox">
-						<input type="checkbox" name="print_content" value="日付専用" />
-						<i class="fa fa-check"></i>
-						<span>日付専用</span>
-					</label>
-					<label class="checkbox">
-						<input type="checkbox" name="print_content" value="製造者、原材料などその他の一括表示" />
-						<i class="fa fa-check"></i>
-						<span>製造者、原材料などその他の一括表示</span>
-					</label>
+					<div class="title">現在の方法</div>
+					<input type="text" name="now_method" placeholder="手押印　自動押印（機種名）など" />
 				</div>
 				<div class="contact-item">
-					<div class="title">印字ピッチ</div>
-					<input type="text" name="print_pitch" placeholder="　mm〜　mm" />
+					<div class="title">押印内容</div>
+					<input type="text" name="print_content" placeholder="日付印、社印・丸印など捺印、受領印、ロットナンバーなど" />
 				</div>
 				<div class="contact-item">
-					<div class="title">印字ショット数</div>
-					<input type="text" name="print_short" placeholder="　回 / 　分" />
+					<div class="title">印字対象の1日の使用量</div>
+					<input type="text" name="print_amount" placeholder="何枚" />
 				</div>
 				<div class="contact-item">
-					<div class="title">充填から出荷までの工程</div>
-					<input type="text" name="engineer_flow" placeholder="高温殺菌（ボイル、スチーム等）、常温、チルド、冷凍" />
+					<div class="title">押印する紙の材質</div>
+					<input type="text" name="paper_type" placeholder="普通紙、コート紙など" />
 				</div>
 				<div class="contact-item">
-					<div class="title">化学物質等の付着</div>
-					<input type="text" name="chemical_element" placeholder="充填および出荷後の油・アルコールなど化学物質が付着する可能性" />
+					<div class="title">紙のサイズ・厚さ</div>
+					<input type="text" name="paper_size" placeholder="縦　mm・横　mm・厚さ　mm" />
 				</div>
-
 				<div class="contact-item less-checkbox">
 					<div class="title">ご希望回答方法</div>
 					<label class="checkbox">

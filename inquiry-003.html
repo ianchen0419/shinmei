@@ -31,7 +31,7 @@
 			<form action="" class="mar_top40">
 				<div class="contact-item">
 					<div class="title">製品名</div>
-					<p>包装機用 超小型サーマルプリンター SCS</p>
+					<p>卓上型 ロールフィルムサーマルプリンター RPS</p>
 				</div>
 				<div class="contact-item threerow-checkbox">
 					<div class="title">
@@ -109,59 +109,24 @@
 					<textarea name="add_content" cols="30" rows="10" placeholder="補足事項があればご記入ください。"></textarea>
 				</div>
 				<div class="contact-item">
-					<div class="title">包装する製品の種類</div>
-					<input type="text" name="package_type" />
+					<div class="title">包装する製品内容</div>
+					<input type="text" name="product_content" />
 				</div>
 				<div class="contact-item">
-					<div class="title">包装機明細</div>
-					<input type="text" name="machine_detail" placeholder="メーカー名・形式名" />
-				</div>
-				<div class="contact-item less-checkbox">
-					<div class="title">包装機ピロー種類</div>
-					<label class="checkbox">
-						<input type="checkbox" name="pillow-type" value="縦ピロー" />
-						<i class="fa fa-check"></i>
-						<span>縦ピロー</span>
-					</label>
-					<label class="checkbox">
-						<input type="checkbox" name="pillow-type" value="横ピロー" />
-						<i class="fa fa-check"></i>
-						<span>横ピロー</span>
-					</label>
-				</div>
-				<div class="contact-item less-checkbox">
-					<div class="title">包装機稼働方法</div>
-					<label class="checkbox">
-						<input type="checkbox" name="operate_method" value="連続式" />
-						<i class="fa fa-check"></i>
-						<span>連続式</span>
-					</label>
-					<label class="checkbox">
-						<input type="checkbox" name="operate_method" value="間欠式" />
-						<i class="fa fa-check"></i>
-						<span>間欠式</span>
-					</label>
-				</div>
-				<div class="contact-item less-checkbox">
-					<div class="title">印字内容</div>
-					<label class="checkbox">
-						<input type="checkbox" name="print_content" value="日付専用" />
-						<i class="fa fa-check"></i>
-						<span>日付専用</span>
-					</label>
-					<label class="checkbox">
-						<input type="checkbox" name="print_content" value="製造者、原材料などその他の一括表示" />
-						<i class="fa fa-check"></i>
-						<span>製造者、原材料などその他の一括表示</span>
-					</label>
+					<div class="title">フィルムサイズ</div>
+					<input type="text" name="film_size" placeholder="縦  mm・横  mm" />
 				</div>
 				<div class="contact-item">
-					<div class="title">印字ピッチ</div>
-					<input type="text" name="print_pitch" placeholder="　mm〜　mm" />
+					<div class="title">印字サイズ</div>
+					<input type="text" name="print_size" placeholder="縦  mm・横  mm" />
 				</div>
 				<div class="contact-item">
-					<div class="title">印字ショット数</div>
-					<input type="text" name="print_short" placeholder="　回 / 　分" />
+					<div class="title">固定印字情報</div>
+					<input type="text" name="print_fix" placeholder="＊製造者記号　＊バーコード等" />
+				</div>
+				<div class="contact-item">
+					<div class="title">可変印字情報</div>
+					<input type="text" name="print_change" placeholder="＊製造日　＊賞味期限　＊消費期限　＊ロット番号　＊トレーサビリティ記号など" />
 				</div>
 				<div class="contact-item">
 					<div class="title">充填から出荷までの工程</div>
