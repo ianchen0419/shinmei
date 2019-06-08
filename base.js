@@ -143,3 +143,11 @@ function sectionShowUp(e){
 }
 
 window.addEventListener('wheel', debounce(sectionShowUp, 20));
+
+function choose(content){
+	choosedText.textContent=content;
+	dropdownInput.value=content;
+	choosedText.classList.add('active');
+	dropdownWrapper.classList.remove('show');
+
+}
