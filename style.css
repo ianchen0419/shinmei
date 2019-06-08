@@ -417,7 +417,7 @@ body {
 
 .sitemap-area {
 	background: #0844a4;
-	padding: 20px 0 10px 0;
+	padding: 10px 0;
 }
 
 .sitemap-area .sitemap-block {
@@ -426,6 +426,20 @@ body {
 	width: 49%;
 	display: inline-block;
 	vertical-align: top;
+}
+
+.sitemap-catch * {
+	font-size: 12px;
+	color: #fff;
+}
+
+.sitemap-catch h1 {
+	margin-right: 40px;
+}
+
+.sitemap-catch {
+	display: flex;
+	align-items: baseline;
 }
 
 .sitemap-block p {
@@ -457,7 +471,6 @@ body {
 
 .visual-title {
 	background-color: #d4e3fc;
-    background-image: linear-gradient(45deg, #fff 25%, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff 75%),linear-gradient(-135deg, #fff 25%, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff 75%);
     background-position: 0 0, 3px 3px;
     background-repeat: repeat;
     background-size: 6px 6px;
@@ -502,8 +515,12 @@ body {
     font-size: 12px;
 }
 
+.contact-path+.section-title {
+	margin-top: 40px;
+}
+
 .section-title {
-	margin: 40px 0;
+	margin: 80px 0 40px 0;
 }
 
 .section-title+.deco-title {
@@ -1077,12 +1094,13 @@ body {
 
 .section-title.detail {
 	cursor: pointer;
+	display: block;
 }
 
 .section-title.detail h2:after {
 	content: '詳細';
     display: inline-block;
-    background: #0944a4;
+    background: #005E15;
     color: #fff;
     border-radius: 3px;
     padding: 2px 20px;
