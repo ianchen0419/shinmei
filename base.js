@@ -20,6 +20,7 @@ menuXhr.send();
 menuXhr.onreadystatechange=function(){
 	if(menuXhr.readyState==4 && menuXhr.status==200){
 		menu.innerHTML = menuXhr.responseText;
+		closeMobileMenu();
 	}
 };
 
@@ -169,5 +170,23 @@ function jsonp(url) {
     var script=document.createElement('script');
     script.src='http://zipcloud.ibsnet.co.jp/api/search?zipcode='+url+'&callback=showData';
     document.body.appendChild(script);
+}
+
+function openMobileMenu(){
+	document.body.classList.add('mobile-menu-opened');
+	mobileMenu.classList.add('opened');
+}
+
+// menu dropdown
+function closeMobileMenu(){
+	//mobile menu dropdown
+	document.body.addEventListener('touchstart', function(event){
+
+		if(event.target.tagName=='BODY' && mobileMenu.classList.contains('opened')){
+			document.body.classList.remove('mobile-menu-opened');
+			mobileMenu.classList.remove('opened');
+		}
+	})
+
 }
 
