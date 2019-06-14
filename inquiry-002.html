@@ -198,7 +198,7 @@
 						<div class="badge">必須</div>
 					</div>
 					<div>
-						<input type="number" name="your_postcode" id="postcode" class="short" required placeholder="例：1500047" maxlength="7" />
+						<input type="number" name="your_postcode" id="postcode" class="short" required placeholder="例:1500047" maxlength="7" />
 						<button class="blue-button" id="postButton" type="button" onclick="jsonp(postcode.value)">
 							<i class="fa fa-search"></i>
 							<span>郵便番号から<br>住所を自動入力</span>
@@ -263,7 +263,7 @@
 						<input type="text" name="your_address2" id="address2" class="short" required placeholder="市区町村" />
 					</div>
 					<div>
-						<input type="text" name="your_address2" required placeholder="番地、建物、フロア/部屋番号等" />
+						<input type="text" name="your_address3" required placeholder="番地、建物、フロア/部屋番号等" />
 					</div>
 					<p>＊代理店の方は、顧客の所在地を選択してください。<br>不明な場合は、貴社の所在地を選択してください。</p>
 				</div>
@@ -295,12 +295,12 @@
 					<input type="url" name="your_website" />
 				</div>
 
-				<label class="checkbox">
+				<label class="checkbox agree-checkbox">
 					<input type="checkbox" name="your_agree" required />
 					<i class="fa fa-check"></i>
 					<span>「</span><a href="privacy.html" target="_blank" class="link-text">個人情報保護方針</a><span>」に同意する</span>
 				</label>
-				<div class="badge">必須</div>
+				<div class="badge agree-badge">必須</div>
 				
 				<div class="button-area">
 					<input type="submit" value="入力内容を確認する" class="green-button" />
