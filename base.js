@@ -37,9 +37,10 @@ footerXhr.onreadystatechange=function(){
 };
 
 function sliderShow(){
-	// -75% 1 copy
-	// -50% 3
-	// -25% 2
+	// -80% 1 copy
+	// -60% 4
+	// -40% 3
+	// -20% 2
 	// 0% 1
 	let sliderPosition=0;
 	let isSliding=false;
@@ -47,9 +48,9 @@ function sliderShow(){
 	var timer=setInterval(sliding, 5000);
 	function sliding(){
 		isSliding=true;
-		if(sliderPosition==-50){
-			//第3枚
-			sliderPosition=-75;
+		if(sliderPosition==-60){
+			//第4枚
+			sliderPosition=-80;
 			sliderWrapper.style.transform="translateX("+sliderPosition+"%)";
 			setTimeout(function(){
 				sliderWrapper.style.transition="none";
@@ -64,7 +65,7 @@ function sliderShow(){
 
 		}else{
 			//第1枚、第2枚
-			sliderPosition-=25;
+			sliderPosition-=20;
 			sliderWrapper.style.transform="translateX("+sliderPosition+"%)";
 		}
 	}
@@ -72,19 +73,21 @@ function sliderShow(){
 	sliderWrapper.addEventListener('transitionend', function(){
 		var nowActived=document.querySelector('.dot.active');
 		nowActived.classList.remove('active');
-		if(sliderPosition==0 || sliderPosition==-75){
-			left.classList.add('active');
-		}else if(sliderPosition==-25){
-			center.classList.add('active');
+		if(sliderPosition==0 || sliderPosition==-80){
+			dot1.classList.add('active');
+		}else if(sliderPosition==-20){
+			dot2.classList.add('active');
+		}else if(sliderPosition==-40){
+			dot3.classList.add('active');
 		}else{
-			right.classList.add('active');
+			dot4.classList.add('active');
 		}
 
 		isSliding=false;
 	});
 
 
-	left.addEventListener('click', function(){
+	dot1.addEventListener('click', function(){
 		if(isSliding==false){
 			sliderPosition=0;
 			sliderWrapper.style.transform="translateX("+sliderPosition+"%)";
@@ -93,18 +96,27 @@ function sliderShow(){
 		}
 	});
 
-	center.addEventListener('click', function(){
+	dot2.addEventListener('click', function(){
 		if(isSliding==false){
-			sliderPosition=-25;
+			sliderPosition=-20;
 			sliderWrapper.style.transform="translateX("+sliderPosition+"%)";
 			clearInterval(timer);
 			timer=setInterval(sliding, 5000);
 		}
 	});
 
-	right.addEventListener('click', function(){
+	dot3.addEventListener('click', function(){
 		if(isSliding==false){
-			sliderPosition=-50;
+			sliderPosition=-40;
+			sliderWrapper.style.transform="translateX("+sliderPosition+"%)";
+			clearInterval(timer);
+			timer=setInterval(sliding, 5000);
+		}
+	});
+
+	dot4.addEventListener('click', function(){
+		if(isSliding==false){
+			sliderPosition=-60;
 			sliderWrapper.style.transform="translateX("+sliderPosition+"%)";
 			clearInterval(timer);
 			timer=setInterval(sliding, 5000);
