@@ -130,17 +130,28 @@ if(nowPath=='' || nowPath=='index.html'){
 }
 
 var sections=document.querySelectorAll('section');
+var lastY;
 function sectionShowUp(e){
-	if(e.deltaY>=1){
+	if(lastY-pageYOffset<0){
 		for(each in sections){
 			if(sections[each].offsetTop-innerHeight<pageYOffset && !sections[each].classList.contains('uping')){
 				sections[each].classList.add('uping');
 			}
 		}
 	}
+	lastY=pageYOffset;
 }
 
-window.addEventListener('wheel', sectionShowUp);
+//for only loading in the middle of the page
+function middleLoad(){
+	for(each in sections){
+		if(sections[each].offsetTop-innerHeight<pageYOffset && !sections[each].classList.contains('uping')){
+			sections[each].classList.add('uping');
+		}
+	}
+}
+
+window.addEventListener('scroll', sectionShowUp);
 
 function choose(content){
 	choosedText.textContent=content;
