@@ -129,33 +129,18 @@ if(nowPath=='' || nowPath=='index.html'){
 	sliderShow();
 }
 
-function debounce(func, wait = 20, immediate = true) {
-  var timeout;
-  return function() {
-    var context = this, args = arguments;
-    var later = function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-}
-
 var sections=document.querySelectorAll('section');
 function sectionShowUp(e){
 	if(e.deltaY>=1){
 		for(each in sections){
-			if(sections[each].offsetTop-innerHeight<scrollY && !sections[each].classList.contains('uping')){
+			if(sections[each].offsetTop-innerHeight<pageYOffset && !sections[each].classList.contains('uping')){
 				sections[each].classList.add('uping');
 			}
 		}
 	}
 }
 
-window.addEventListener('wheel', debounce(sectionShowUp, 20));
+window.addEventListener('wheel', sectionShowUp);
 
 function choose(content){
 	choosedText.textContent=content;
