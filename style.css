@@ -1636,6 +1636,14 @@ input.short {
 	display: none;
 }
 
+textarea.product-name {
+	padding: 0;
+	border: 0;
+	margin: 0;
+	resize: none;
+	background: none;
+}
+
 @media (max-width: 768px) {
 	body,html {
 		width: 100vw;

@@ -198,3 +198,31 @@ function closeMobileMenu(){
 	})
 
 }
+
+function saveValue2(th, e, name){
+	e.preventDefault();
+	localStorage['inquiry002']=name;
+	location.href=th.href;
+}
+
+function saveValue4(th, e, name){
+	e.preventDefault();
+	localStorage['inquiry004']=name;
+	location.href=th.href;
+}
+
+function includeName2(){
+	if(window['inquiry002']){
+		inquiry002.value=localStorage['inquiry002'];
+	}else{
+		localStorage['inquiry002']='';
+	}
+}
+
+function includeName4(){
+	if(window['inquiry004']){
+		inquiry004.value=localStorage['inquiry004'];
+	}else{
+		localStorage['inquiry004']='';
+	}
+}
