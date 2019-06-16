@@ -161,24 +161,45 @@ function choose(content){
 
 }
 
-function jsonp(url) {
-    window.showData=function(data){
-		delete window['showData'];
-    	document.body.removeChild(script);
-    	if(data.results!==null){
-    		// 都道府県
-			choosedText.textContent=data.results[0].address1;
+function jsonp(url){
+    var mailXhr=new XMLHttpRequest();
+	mailXhr.open('POST', 'https://work-capital-server.com/postcode/index.php', true);
+	mailXhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	mailXhr.onreadystatechange=function(){
+		if(mailXhr.readyState==4 && mailXhr.status==200){
+			var json=JSON.parse(mailXhr.responseText);
+			// console.log(json.city);
+			// console.log(json.address);
+			// 都道府県
+			choosedText.textContent=json.city;
 			choosedText.classList.add('active');
-			dropdownInput.value=data.results[0].address1;
+			dropdownInput.value=json.city;
 			// 市区町村
-			address2.value=data.results[0].address2+data.results[0].address3;
-    	}
-    }
-
-    var script=document.createElement('script');
-    script.src='http://zipcloud.ibsnet.co.jp/api/search?zipcode='+url+'&callback=showData';
-    document.body.appendChild(script);
+			address2.value=json.address;
+		}
+	};
+	mailXhr.send("code="+url);
 }
+
+
+// function jsonp(url) {
+//     window.showData=function(data){
+// 		delete window['showData'];
+//     	document.body.removeChild(script);
+//     	if(data.results!==null){
+//     		// 都道府県
+// 			choosedText.textContent=data.results[0].address1;
+// 			choosedText.classList.add('active');
+// 			dropdownInput.value=data.results[0].address1;
+// 			// 市区町村
+// 			address2.value=data.results[0].address2+data.results[0].address3;
+//     	}
+//     }
+
+//     var script=document.createElement('script');
+//     script.src='http://zipcloud.ibsnet.co.jp/api/search?zipcode='+url+'&callback=showData';
+//     document.body.appendChild(script);
+// }
 
 function openMobileMenu(){
 	document.body.classList.add('mobile-menu-opened');
