@@ -226,3 +226,14 @@ function includeName4(){
 		localStorage['inquiry004']='';
 	}
 }
+
+function checkEmail(th){
+	var firstEmail=document.querySelector('input[name="your_mail"]');
+	console.log(th.value==firstEmail.value);
+	if(th.value==firstEmail.value){
+		th.setCustomValidity("");
+	}else{
+		th.setCustomValidity("メールアドレス（確認用）の内容に誤りがあります");
+		console.log('ya');
+	}
+}

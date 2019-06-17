@@ -1350,7 +1350,8 @@ a.light-button {
 }
 
 .radio input[type="radio"] {
-	display: none;
+	/*display: none;*/
+	opacity: 0;
 }
 
 .radio-widget {
@@ -1390,7 +1391,8 @@ a.light-button {
 }
 
 .checkbox input {
-	display: none;
+	/*display: none;*/
+	opacity: 0;
 }
 
 .checkbox.two-row {
@@ -1642,6 +1644,14 @@ textarea.product-name {
 	margin: 0;
 	resize: none;
 	background: none;
+}
+
+#dropdownInput {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	user-select: none;
+	pointer-events: none;
 }
 
 @media (max-width: 768px) {

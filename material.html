@@ -129,22 +129,22 @@
 							</th>
 							<td>
 								<label class="checkbox">
-									<input type="checkbox" name="your_purpose" required value="新規導入の検討" />
+									<input type="checkbox" name="your_purpose" value="新規導入の検討" />
 									<i class="fa fa-check"></i>
 									<span>新規導入の検討</span>
 								</label>
 								<label class="checkbox">
-									<input type="checkbox" name="your_purpose" required value="入れ替え導入の検討" />
+									<input type="checkbox" name="your_purpose" value="入れ替え導入の検討" />
 									<i class="fa fa-check"></i>
 									<span>入れ替え導入の検討</span>
 								</label>
 								<label class="checkbox">
-									<input type="checkbox" name="your_purpose" required value="試験導入の検討" />
+									<input type="checkbox" name="your_purpose" value="試験導入の検討" />
 									<i class="fa fa-check"></i>
 									<span>試験導入の検討</span>
 								</label>
 								<label class="checkbox">
-									<input type="checkbox" name="your_purpose" required value="情報収集" />
+									<input type="checkbox" name="your_purpose" value="情報収集" />
 									<i class="fa fa-check"></i>
 									<span>情報収集</span>
 								</label>
@@ -157,32 +157,32 @@
 							</th>
 							<td>
 								<label class="checkbox">
-									<input type="checkbox" name="your_schedule" required value="すぐにでも" />
+									<input type="checkbox" name="your_schedule" value="すぐにでも" />
 									<i class="fa fa-check"></i>
 									<span>すぐにでも</span>
 								</label>
 								<label class="checkbox">
-									<input type="checkbox" name="your_schedule" required value="1ヶ月以内" />
+									<input type="checkbox" name="your_schedule" value="1ヶ月以内" />
 									<i class="fa fa-check"></i>
 									<span>1ヶ月以内</span>
 								</label>
 								<label class="checkbox">
-									<input type="checkbox" name="your_schedule" required value="3ヶ月以内" />
+									<input type="checkbox" name="your_schedule" value="3ヶ月以内" />
 									<i class="fa fa-check"></i>
 									<span>3ヶ月以内</span>
 								</label>
 								<label class="checkbox">
-									<input type="checkbox" name="your_schedule" required value="半年以内" />
+									<input type="checkbox" name="your_schedule" value="半年以内" />
 									<i class="fa fa-check"></i>
 									<span>半年以内</span>
 								</label>
 								<label class="checkbox">
-									<input type="checkbox" name="your_schedule" required value="1年以内" />
+									<input type="checkbox" name="your_schedule" value="1年以内" />
 									<i class="fa fa-check"></i>
 									<span>1年以内</span>
 								</label>
 								<label class="checkbox">
-									<input type="checkbox" name="your_schedule" required value="未定" />
+									<input type="checkbox" name="your_schedule" value="未定" />
 									<i class="fa fa-check"></i>
 									<span>未定</span>
 								</label>
@@ -242,7 +242,7 @@
 					</div>
 					<div>
 						<div id="dropdownWrapper">
-							<input type="text" hidden id="dropdownInput" name="your_address1" required  />
+							<input type="text" autocomplete="off" id="dropdownInput" name="your_address1" required  />
 							<div class="dropdown-bar" tabindex=0 onclick="dropdownWrapper.classList.toggle('show')">
 								<span id="choosedText">都道府県を選択してください</span>
 							</div>
@@ -322,7 +322,7 @@
 						<span>メールアドレス（確認用）</span>
 						<div class="badge">必須</div>
 					</div>
-					<input type="email" name="your_mail_confirm" required />
+					<input type="email" name="your_mail_confirm" required onblur="checkEmail(this)" />
 				</div>
 				<div class="contact-item">
 					<div class="title">
@@ -339,8 +339,8 @@
 				<div class="badge agree-badge">必須</div>
 				
 				<div class="button-area">
-					<!-- <input type="submit" value="入力内容を確認する" class="green-button" /> -->
-					<a href="material__c.html" class="green-button">入力内容を確認する</a>
+					<input type="submit" value="入力内容を確認する" class="green-button" />
+					<!-- <a href="material__c.html" class="green-button">入力内容を確認する</a> -->
 				</div>
 			</form>
 
@@ -352,6 +352,33 @@
 		</div>
 
 	</main>
+
+	<script>
+		var firstPurpose=document.querySelectorAll('input[name="your_purpose"]')[0];
+		var firstSchedule=document.querySelectorAll('input[name="your_schedule"]')[0];
+
+		var allInputs=document.querySelectorAll('form input');
+
+		for(i=0;i<allInputs.length;i++){
+			allInputs[i].addEventListener('change', function(){
+				var checkedPurpose=document.querySelectorAll('input[name="your_purpose"]:checked');
+				var checkedSchedule=document.querySelectorAll('input[name="your_schedule"]:checked');
+				if(checkedPurpose.length<1){
+					firstPurpose.setCustomValidity("チェックボックスを最低一つ選んでください");
+				}else{
+					firstPurpose.setCustomValidity("");
+				}
+
+				if(checkedSchedule.length<1){
+					firstSchedule.setCustomValidity("チェックボックスを最低一つ選んでください");
+				}else{
+					firstSchedule.setCustomValidity("");
+				}
+
+
+			})
+		}
+	</script>
 
 	
 	<footer id="footer"></footer>
