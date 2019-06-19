@@ -1514,23 +1514,9 @@ input.short {
 	top: 25px;
 }
 
-.dropdown-bar.disabled {
-	background: #f2f2f2;
-	color: #333;
-}
-
-.dropdown-bar span {
-	color: #9D9D9D;
-	user-select: none;
-}
-
-.dropdown-bar span.active {
-	color: #333;
-}
-
 .dropdown-bar {
 	width: 300px;
-	padding: 10px 10px 9px 10px;
+	padding: 12px 10px;
 	border-radius: 2px;
 	border: 1px solid #d1d1d1;
 	background: #FCFCFC;
@@ -1647,11 +1633,18 @@ textarea.product-name {
 }
 
 #dropdownInput {
-	position: absolute;
-	opacity: 0;
-	width: 0;
+	background: none;
+	border: none;
+	font-size: 15px;
+	width: 100%;
 	user-select: none;
-	pointer-events: none;
+	padding: 0;
+    margin: 0;
+    pointer-events: none;
+}
+
+#dropdownInput:focus {
+	outline: none;
 }
 
 @media (max-width: 768px) {

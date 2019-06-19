@@ -137,9 +137,8 @@
 					</div>
 					<div>
 						<div id="dropdownWrapper">
-							<input type="text" hidden id="dropdownInput" name="your_address1" required  />
 							<div class="dropdown-bar" tabindex=0 onclick="dropdownWrapper.classList.toggle('show')">
-								<span id="choosedText">都道府県を選択してください</span>
+								<input id="dropdownInput" type="text" autocomplete="off" name="your_address1" required="required" placeholder="都道府県を選択してください"/>
 							</div>
 							<div class="dropdown-content">
 								<div class="dropdown-option" onclick="choose(this.innerText)">北海道</div>
@@ -217,7 +216,7 @@
 						<span>メールアドレス（確認用）</span>
 						<div class="badge">必須</div>
 					</div>
-					<input type="email" name="your_mail_confirm" required />
+					<input type="email" name="your_mail_confirm" required onblur="checkEmail(this)" />
 				</div>
 				<div class="contact-item">
 					<div class="title">

@@ -154,11 +154,8 @@ function middleLoad(){
 window.addEventListener('scroll', sectionShowUp);
 
 function choose(content){
-	choosedText.textContent=content;
 	dropdownInput.value=content;
-	choosedText.classList.add('active');
 	dropdownWrapper.classList.remove('show');
-
 }
 
 function jsonp(url){
@@ -171,8 +168,6 @@ function jsonp(url){
 			// console.log(json.city);
 			// console.log(json.address);
 			// 都道府県
-			choosedText.textContent=json.city;
-			choosedText.classList.add('active');
 			dropdownInput.value=json.city;
 			// 市区町村
 			address2.value=json.address;
