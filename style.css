@@ -1543,7 +1543,7 @@ input.short {
 	top: 55px;
 	background: #fff;
 	height: 260px;
-	overflow: scroll;
+	overflow-y: scroll;
 	display: none;
 }
 
